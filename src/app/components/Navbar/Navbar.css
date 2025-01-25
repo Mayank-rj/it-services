@@ -1,0 +1,19 @@
+nav{
+    width: 100%;
+}
+
+/* Assuming you have a CSS file where you can add this */
+.mobile-menu {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px); /* Optional: slide effect */
+  }
+  
+  .mobile-menu.open {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .menu-container {
+    overflow: hidden; /* To prevent showing content during transition */
+  }
