@@ -27,32 +27,30 @@ const DropDown = ({ item, setIsMobileMenuOpen, setActiveMenu }) => {
 
 const Menu = ({ title, items, onClick, isMobile }) => {
   return (
-    <>
-      <div className="group ms-8 h-20 flex items-center">
-        <Link
-          href="/"
-          onClick={(e) => onClick(e, title)}
-          className="text-gray-600 hover:text-gray-800"
-        >
-          {title}
-        </Link>
+    <div className="group ms-8 h-20 flex items-center">
+      <Link
+        href="/"
+        onClick={(e) => onClick(e, title)}
+        className="text-gray-600 hover:text-gray-800"
+      >
+        {title}
+      </Link>
 
-        {/* Full-width Dropdown content (shown on hover on desktop) */}
-        {!isMobile && (
-          <div className="absolute z-10 left-0 top-full w-screen bg-white shadow-lg p-6 grid grid-cols-3 gap-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
-            {items.map((item, index) => (
-              <DropDown key={index} item={item} />
-            ))}
-          </div>
-        )}
-      </div>
-    </>
+      {/* Dropdown Content */}
+      {!isMobile && (
+        <div className="absolute z-10 left-0 top-full w-screen bg-white shadow-lg p-6 grid grid-cols-3 gap-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
+          {items.map((item, index) => (
+            <DropDown key={index} item={item} />
+          ))}
+        </div>
+      )}
+    </div>
   );
 };
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // state for hamburger menu
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Hamburger menu state
 
   const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
 
@@ -60,19 +58,16 @@ const Navbar = () => {
     e.preventDefault();
     if (isMobile) {
       setActiveMenu(title);
-      setIsMobileMenuOpen(false);
     }
   };
 
   const handleBackClick = () => {
-    setActiveMenu(null);
+    setActiveMenu(null); // Show the main dropdown menu
   };
 
   return (
     <nav className="bg-white shadow-md relative">
-      <div
-        className={"md:container mx-auto md:flex justify-between items-center"}
-      >
+      <div className="md:container mx-auto md:flex justify-between items-center">
         {/* Logo */}
         <div className="flex justify-between px-5">
           <div className="text-gray-800 text-md font-semibold text-center">
@@ -136,27 +131,20 @@ const Navbar = () => {
               Blog
             </Link>
           </div>
-
-          {/* Contact Us Button */}
-          <Link
-            href="/contact"
-            className="hidden md:block bg-purple-600 text-white py-2 px-4 rounded-full hover:bg-purple-700"
-          >
-            Contact us
-          </Link>
         </div>
 
-        {/* Submenu for Mobile */}
+        {/* Contact Us Button */}
+        <Link
+          href="/contact"
+          className="hidden md:block bg-purple-600 text-white py-2 px-4 rounded-full hover:bg-purple-700"
+        >
+          Contact us
+        </Link>
+
+        {/* Mobile Dropdown Menu */}
         {isMobile && activeMenu && (
           <div className="fixed inset-0 bg-white z-50 p-6">
-            {/* Close (Cross) Icon at the Top Right */}
-            <button
-              onClick={() => setActiveMenu(null)}
-              className="absolute top-4 right-4 text-2xl"
-            >
-              &times;
-            </button>
-
+            {/* Back Button */}
             <button
               onClick={handleBackClick}
               className="text-purple-600 font-semibold mb-4"
@@ -164,7 +152,7 @@ const Navbar = () => {
               &larr; Back
             </button>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               {menuData[activeMenu].map((item, index) => (
                 <DropDown
                   key={index}
