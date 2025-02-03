@@ -1,25 +1,24 @@
-nav{
-    width: 100%;
+nav {
+  width: 100%;
 }
 
 /* Assuming you have a CSS file where you can add this */
 .mobile-menu {
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    opacity: 0;
-    transform: translateY(-10px); /* Optional: slide effect */
-  }
-  
-  .mobile-menu.open {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .menu-container {
-    overflow: hidden; /* To prevent showing content during transition */
-  }
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(-10px); /* Optional: slide effect */
+}
 
+.mobile-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  /* Ensure Dropdown Visibility */
+.menu-container {
+  overflow: hidden; /* To prevent showing content during transition */
+}
+
+/* Ensure Dropdown Visibility */
 
 /* Set parent container to allow visible overflow */
 nav {
@@ -60,4 +59,20 @@ nav {
   width: 100vw;
   height: 100vh;
   overflow: visible; /* Ensure no cutoff on mobile dropdowns */
+}
+
+/* Assuming you're using Tailwind CSS utilities for mobile view font size */
+@media (max-width: 768px) {
+  .mobile-font-size {
+    font-size: 1.5rem; /* Tailwind text-2xl equivalent */
+  }
+
+  .mobile-rule {
+    border-top: 1px solid #e5e7eb; /* Tailwind's border-gray-300 color */
+  }
+
+  .contact-number {
+    margin-top: 5.5rem; /* Adds margin to the top */
+    font-size: 1.875rem; /* Equivalent to text-3xl */
+  }
 }

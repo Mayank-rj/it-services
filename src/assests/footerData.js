@@ -2,38 +2,31 @@ export const footerData = {
   Services: [
     {
       label: "UI/UX Design",
-      description: "All the latest updates about Home Loan in one place.",
-      path: "/home-loan",
+      path: "/services/ui_ux_design",
     },
     {
       label: "Website Development",
-      description: "Compare rates from multiple providers instantly.",
-      path: "/compare-home-loan-rate",
+      path: "/services/website_development",
     },
     {
       label: "Mobile App Development",
-      description: "Compare rates from multiple providers instantly.",
-      path: "/compare-home-loan-rate",
+      path: "/services/mobile_app_development",
     },
     {
       label: "Digital Marketing",
-      description: "Compare rates from multiple providers instantly.",
-      path: "/compare-home-loan-rate",
+      path: "/services/digital_marketing",
     },
     {
       label: "CMS Website",
-      description: "Compare rates from multiple providers instantly.",
-      path: "/compare-home-loan-rate",
+      path: "/services/cms_website",
     },
     {
       label: "Salesforce Development",
-      description: "Compare rates from multiple providers instantly.",
-      path: "/compare-home-loan-rate",
+      path: "/services/salesforce_development",
     },
     {
       label: "Custom Software Development",
-      description: "Compare rates from multiple providers instantly.",
-      path: "/compare-home-loan-rate",
+      path: "/services/custom_software_development",
     },
   ],
   "Quick Links": [
