@@ -71,7 +71,7 @@ export default function Footer() {
               ))}
               {/* Social Icons with Hover Effect */}
               <h2 className="text-4xl mt-8">Follow Us</h2>
-              <li className="flex gap-8 my-4">
+              <li className="flex flex-wrap gap-8 my-4">
                 <a
                   href="https://facebook.com"
                   target="_blank"

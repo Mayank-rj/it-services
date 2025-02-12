@@ -19,6 +19,7 @@ import {
   faLinkedin,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+// import { useRouter } from "next/router";
 
 const DropDown = ({ item, setIsMobileMenuOpen, setActiveMenu, isMobile }) => {
   const handleItemClick = () => {
@@ -27,20 +28,25 @@ const DropDown = ({ item, setIsMobileMenuOpen, setActiveMenu, isMobile }) => {
   };
 
   return (
-    <div
-      className={`flex flex-col items-start ${isMobile && "py-4 border-b-2"}`}
-    >
-      <Link
-        href={item.path}
-        onClick={handleItemClick}
-        className={`text-purple-300 font-semibold ${isMobile && "text-2xl"}`}
+    <Link href={item.path} onClick={handleItemClick}>
+      <div
+        className={`flex flex-col items-start border border-transparent p-1 hover:border hover:border-white rounded-md ${
+          isMobile && "py-4 border-b-2"
+        }`}
       >
-        {item.label}
-      </Link>
-      <p className={`text-white text-sm  ${isMobile && "text-lg"}`}>
-        {item.description}
-      </p>
-    </div>
+        <p
+          className={`text-purple-300 font-semibold flex items-center gap-3 mb-1 ${
+            isMobile && "text-2xl"
+          }`}
+        >
+          <FontAwesomeIcon icon={item.icon} className="text-lg" />
+          {item.label}
+        </p>
+        <p className={`text-white text-sm  ${isMobile && "text-lg"}`}>
+          {item.description}
+        </p>
+      </div>
+    </Link>
   );
 };
 
@@ -53,7 +59,7 @@ const Menu = ({ title, items, onClick, isMobile, setIsMobileMenuOpen }) => {
     >
       <div className="flex justify-between items-center w-full">
         <Link
-          href={title.toLowerCase()}
+          href={`/${title.toLowerCase()}`}
           className={`text-white md:text-lg font-bold hover:text-purple-300 ${
             isMobile && "text-2xl"
           }`}
@@ -73,10 +79,25 @@ const Menu = ({ title, items, onClick, isMobile, setIsMobileMenuOpen }) => {
 
       {/* Dropdown Content */}
       {!isMobile && (
-        <div className="absolute z-10 left-0 top-full w-screen bg-[#0b1120] shadow-lg p-6 grid grid-cols-3 gap-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
-          {items.map((item, index) => (
-            <DropDown key={index} item={item} isMobile={false} />
-          ))}
+        <div className="absolute z-100 left-0 top-full w-screen bg-[#0b1120] shadow-lg p-6 grid grid-cols-4 gap-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
+          {/* Left Section: Image & Description */}
+          <div className="col-span-1 flex flex-col items-start justify-center p-4">
+            <img
+              src="/your-image.jpg"
+              alt="Industry Overview"
+              className="w-full h-auto rounded-lg"
+            />
+            <p className="text-white mt-4 text-sm leading-relaxed">
+              Discover how our solutions can revolutionize your industry with
+              cutting-edge innovation.
+            </p>
+          </div>
+          {/* Right Section: Dropdown Lists */}
+          <div className="col-span-3 grid grid-cols-3 gap-6">
+            {items.map((item, index) => (
+              <DropDown key={index} item={item} isMobile={false} />
+            ))}
+          </div>
         </div>
       )}
     </div>
@@ -92,21 +113,6 @@ const Navbar = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowGoToTop(true);
-      } else {
-        setShowGoToTop(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // const isMobile = typeof window !== "undefined" && window.innerWidth <= 768;
 
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 768);
