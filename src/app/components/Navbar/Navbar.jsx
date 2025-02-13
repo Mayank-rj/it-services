@@ -202,6 +202,7 @@ const Navbar = () => {
           className={`fixed inset-0 bg-[#0b1120] z-50 p-6 transform transition-transform duration-300 ease-in-out ${
             isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           } right-0 overflow-y-auto`}
+          style={{ overflow: "hidden" }}
         >
           {/* Top Bar: Back Button & Close Button */}
           <div className="flex justify-between items-center mb-6">
