@@ -79,7 +79,7 @@ const Menu = ({ title, items, onClick, isMobile, setIsMobileMenuOpen }) => {
 
       {/* Dropdown Content */}
       {!isMobile && (
-        <div className="absolute z-100 left-0 top-full w-screen bg-[#0b1120] shadow-lg p-6 grid grid-cols-4 gap-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
+        <div className="absolute z-50 left-0 top-full w-screen bg-[#0b1120] shadow-lg p-6 grid grid-cols-4 gap-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none group-hover:pointer-events-auto">
           {/* Left Section: Image & Description */}
           <div className="col-span-1 flex flex-col items-start justify-center p-4">
             <img
