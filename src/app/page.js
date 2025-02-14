@@ -92,6 +92,39 @@ export default function Home() {
     },
   ];
 
+  const projectData = [
+    {
+      name: "Project 1",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicaboet distinctio illo vitae soluta temporibus maxime totam recusandae fuga. Quaerat veritatis at impedit nesciunt minus similique, quos repellat soluta quod.",
+      imageURL: "/projects/porject1.jpg",
+    },
+    {
+      name: "Project 2",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicaboet distinctio illo vitae soluta temporibus maxime totam recusandae fuga. Quaerat veritatis at impedit nesciunt minus similique, quos repellat soluta quod.",
+      imageURL: "/projects/porject2.webp",
+    },
+    {
+      name: "Project 3",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicaboet distinctio illo vitae soluta temporibus maxime totam recusandae fuga. Quaerat veritatis at impedit nesciunt minus similique, quos repellat soluta quod.",
+      imageURL: "/projects/porject1.jpg",
+    },
+    {
+      name: "Project 4",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicaboet distinctio illo vitae soluta temporibus maxime totam recusandae fuga. Quaerat veritatis at impedit nesciunt minus similique, quos repellat soluta quod.",
+      imageURL: "/projects/porject2.webp",
+    },
+    {
+      name: "Project 5",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicaboet distinctio illo vitae soluta temporibus maxime totam recusandae fuga. Quaerat veritatis at impedit nesciunt minus similique, quos repellat soluta quod.",
+      imageURL: "/projects/porject1.jpg",
+    },
+  ];
+
   // const [showModal, setShowModal] = useState(false);
   // const [timer, setTimer] = useState(null);
 
@@ -130,11 +163,21 @@ export default function Home() {
       </section>
 
       <section>
-        <Projects />
+        <h1 className="text-start text-6xl font-bold my-6 px-[10%] md:text-center">
+          Case Study
+        </h1>
+        {projectData.map((project, i) => (
+          <Projects
+            key={i}
+            name={project.name}
+            description={project.description}
+            imageURL={project.imageURL}
+          />
+        ))}
       </section>
 
       {/* Need patterned background Image for this CTA */}
-      <section>
+      <section className="my-32">
         <CTA />
       </section>
 
