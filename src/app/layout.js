@@ -3,7 +3,6 @@ import Navbar from "./components/Navbar/Navbar";
 import "./globals.css";
 import Footer from "./components/Footer/Footer";
 import StoreProvider from "./StoreProvider";
-import Head from "./Head";
 // import PageLoadScrolling from "./components/PageLoadScrolling/PageLoadScrolling";
 
 const geistSans = Geist({
