@@ -144,8 +144,8 @@ const Navbar = () => {
         <div className="flex justify-between items-center w-full md:w-auto">
           <div className="text-gray-800 text-md font-semibold text-center">
             <Link href="/" className="flex flex-col items-center text-white">
-              <img src="/" alt="Logo" className="h-12" />
-              Bada Bhai Hai Na
+              <img src="/" alt="microWeb" className="h-12" />
+              microWeb
             </Link>
           </div>
 

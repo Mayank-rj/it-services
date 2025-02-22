@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-8">
           {/* Loan Categories */}
           <div className="md:col-span-2">
-            <h1 className="text-2xl font-medium mb-2">Web Plant</h1>
+            <h1 className="text-2xl font-medium mb-2">microWeb</h1>
             <p className="mb-2">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
               molestiae libero esse, deleniti beatae impedit corporis. Animi
@@ -130,14 +130,14 @@ export default function Footer() {
         {/* Footer Bottom */}
         <div className="grid grid-cols-1 md:grid-cols-3 items-center gap-4 mt-10">
           <div className="logo flex items-center gap-4 justify-center md:justify-start">
-            <img src="/" alt="Web Plant" className="h-12" />
-            <p className="text-2xl font-medium"> Web Plant</p>
+            <img src="/" alt="microWeb" className="h-12" />
+            <p className="text-2xl font-medium">microWeb</p>
           </div>
           <div className="text-center text-sm text-gray-400 mt-4 md:mt-0">
             Made with ❤️ in India
           </div>
           <div className="text-center text-sm text-gray-400 mt-4 md:mt-0">
-            © 2025 Web Plant. All rights reserved.
+            © {new Date().getFullYear()} microWeb. All rights reserved.
           </div>
         </div>
       </footer>

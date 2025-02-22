@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Image from 'next/image';
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function HeroSec() {
   const [scrollY, setScrollY] = useState(0);
@@ -10,29 +10,20 @@ export default function HeroSec() {
     const handleScroll = () => {
       setScrollY(window.scrollY);
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div className="relative w-full">
-      {/* Parallax Heading */}
-      <div
-        className="fixed left-0 w-full text-white text-4xl font-bold flex items-center justify-center h-24 z-10 transition-all duration-300"
-      >
-        <p className="text-right">Parallax Heading</p> 
+    <div className="relative h-[130vh]">
+      <div className="sticky top-1/2 -translate-y-1/2 text-center text-white z-10 px-4">
+        <h1 className="text-4xl md:text-6xl font-bold">Hero Section</h1>
       </div>
-
-      {/* Scrollable Content */}
-      <div className="h-screen bg-gray-900 flex flex-col items-center justify-start text-white pt-96">
-        {/* Add blank space above the image */}
-        <Image
-          src="/hero/hero_sample.jpg"
-          alt="Background"
-          width={1920}
-          height={1080}
-          className="w-full h-full px-20 "
-        />
+      <div className="relative top-[30vh]">
+        <div
+          className="absolute top-[30vh] left-0 w-full h-screen bg-cover bg-center -z-10"
+          style={{ backgroundImage: "url('/hero/hero_sample.jpg')" }}
+        ></div>
       </div>
     </div>
   );
