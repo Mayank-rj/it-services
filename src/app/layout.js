@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 // };
 
 export const metadata = {
-  title: "About Us - My Website",
+  title: "Micro Web",
   description: "Learn more about our company and team.",
   openGraph: {
     title: "Micro Web",
