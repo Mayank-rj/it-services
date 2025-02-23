@@ -1,4 +1,4 @@
-import HeroSec from "@/app/components/Industries/HeroSec";
+import HeroSec from "@/app/components/Industries/industriesHero/HeroSec";
 import React from "react";
 
 export default function HealthCare() {
