@@ -195,3 +195,21 @@ export const menuData = {
     },
   ],
 };
+
+export const dropDownLeft = {
+  Services: {
+    image: "/",
+    description:
+      "Discover how our solutions can revolutionize your industry with cutting-edge innovation.",
+  },
+  Industries: {
+    image: "/",
+    description:
+      "Discover how our solutions can revolutionize your industry with cutting-edge innovation.",
+  },
+  Portfolio: {
+    image: "/",
+    description:
+      "Discover how our solutions can revolutionize your industry with cutting-edge innovation.",
+  },
+};

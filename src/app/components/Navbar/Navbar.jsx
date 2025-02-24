@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import "./Navbar.css";
-import { menuData } from "../../../assests/menuData";
+import { dropDownLeft, menuData } from "../../../assests/menuData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowUp,
@@ -51,6 +51,8 @@ const DropDown = ({ item, setIsMobileMenuOpen, setActiveMenu, isMobile }) => {
 };
 
 const Menu = ({ title, items, onClick, isMobile, setIsMobileMenuOpen }) => {
+  const leftDropdown = dropDownLeft[title];
+
   return (
     <div
       className={`group md:ms-8 h-20 flex items-center ${
@@ -83,13 +85,12 @@ const Menu = ({ title, items, onClick, isMobile, setIsMobileMenuOpen }) => {
           {/* Left Section: Image & Description */}
           <div className="col-span-1 flex flex-col items-start justify-center p-4">
             <img
-              src="/your-image.jpg"
-              alt="Industry Overview"
+              src={leftDropdown.image}
+              alt={title}
               className="w-full h-auto rounded-lg"
             />
             <p className="text-white mt-4 text-sm leading-relaxed">
-              Discover how our solutions can revolutionize your industry with
-              cutting-edge innovation.
+              {leftDropdown.description}
             </p>
           </div>
           {/* Right Section: Dropdown Lists */}
