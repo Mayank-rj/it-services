@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export default function CTA() {
+export default function CTA({ heading, description, buttonName }) {
   return (
     <>
       <motion.div
@@ -12,17 +12,13 @@ export default function CTA() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        <h2 className="text-3xl md:text-4xl font-bold">
-          Starting a new project or want to collaborate with us?
-        </h2>
-        <p className="text-purple-700 font-semibold mt-3">
-          Let’s craft brilliance together!
-        </p>
+        <h2 className="text-3xl md:text-4xl font-bold">{heading}</h2>
+        <p className="text-purple-700 font-semibold mt-3">{description}</p>
         <Link
           href="/contact"
           className="mt-5 px-6 py-2 border-2 border-purple-700 text-white rounded-full hover:bg-purple-700 transition duration-300"
         >
-          Get in Touch →
+          {buttonName} →
         </Link>
       </motion.div>
     </>

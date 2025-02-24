@@ -111,18 +111,6 @@ export default function Home() {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicaboet distinctio illo vitae soluta temporibus maxime totam recusandae fuga. Quaerat veritatis at impedit nesciunt minus similique, quos repellat soluta quod.",
       imageURL: "/projects/porject1.jpg",
     },
-    {
-      name: "Project 4",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicaboet distinctio illo vitae soluta temporibus maxime totam recusandae fuga. Quaerat veritatis at impedit nesciunt minus similique, quos repellat soluta quod.",
-      imageURL: "/projects/porject2.webp",
-    },
-    {
-      name: "Project 5",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicaboet distinctio illo vitae soluta temporibus maxime totam recusandae fuga. Quaerat veritatis at impedit nesciunt minus similique, quos repellat soluta quod.",
-      imageURL: "/projects/porject1.jpg",
-    },
   ];
 
   // const [showModal, setShowModal] = useState(false);
@@ -178,7 +166,11 @@ export default function Home() {
 
       {/* Need patterned background Image for this CTA */}
       <section className="my-32">
-        <CTA />
+        <CTA
+          heading={"Starting a new project or want to collaborate with us?"}
+          description={"Let’s craft brilliance together!"}
+          buttonName={"Get in Touch"}
+        />
       </section>
 
       {/* Need Icons or image for this  */}
