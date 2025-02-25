@@ -30,7 +30,7 @@ const DropDown = ({ item, setIsMobileMenuOpen, setActiveMenu, isMobile }) => {
   return (
     <Link href={item.path} onClick={handleItemClick}>
       <div
-        className={`flex flex-col items-start border border-transparent p-1 hover:border hover:border-white rounded-md ${
+        className={`flex flex-col items-start border border-transparent p-1 hover:border hover:border-gray-800 rounded-md ${
           isMobile && "py-4 border-b-2"
         }`}
       >

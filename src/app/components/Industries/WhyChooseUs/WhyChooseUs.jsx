@@ -5,7 +5,7 @@ import Card from "./Card";
 export default function WhyChooseUs({ heading, description, cardInfo }) {
   return (
     <>
-      <div className="my-20" style={{ padding: "0 10%" }}>
+      <div className="my-20 px-[5%] md:px-[10%]">
         <div className="my-10">
           <h1 className="text-4xl font-bold">{heading}</h1>
           <p className="my-5">{description}</p>

@@ -23,7 +23,9 @@ export default function HeroSec({ heading, backgroundImage }) {
         <div
           className="absolute top-[30vh] left-0 w-full h-screen bg-cover bg-center -z-10"
           style={{ backgroundImage: `${backgroundImage}` }}
-        ></div>
+        >
+          <div className="absolute inset-0 bg-black opacity-50"></div>
+        </div>
       </div>
     </div>
   );

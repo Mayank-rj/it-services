@@ -4,7 +4,7 @@ import Card from "./Card";
 export default function Features({ heading, description, cardInfo }) {
   return (
     <>
-      <div className="mt-96 mb-20" style={{ padding: "0 10%" }}>
+      <div className="mt-96 mb-20 px-[5%] md:px-[10%]">
         <div className="mb-10">
           <h1 className="text-4xl mb-10">
             Our <span className="text-purple-600">{heading}</span> Solutions
