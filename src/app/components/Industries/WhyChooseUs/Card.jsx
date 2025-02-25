@@ -1,9 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Card = ({ title, description }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const isMobile = window.innerWidth <= 640;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    if (typeof window !== "undefined") {
+      checkScreenSize();
+      window.addEventListener("resize", checkScreenSize);
+    }
+
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("resize", checkScreenSize);
+      }
+    };
+  }, []);
 
   return (
     <motion.div
