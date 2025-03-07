@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { useState } from "react";
 
 export default function Feedback() {
+  const [showPopup, setShowPopup] = useState(false);
+
   const validationSchema = Yup.object({
     name: Yup.string().min(2, "Too short!").required("Name is required"),
     email: Yup.string().email("Invalid email").required("Email is required"),
@@ -54,10 +57,12 @@ export default function Feedback() {
           <Formik
             initialValues={{ name: "", email: "", feedback: "", rating: 0 }}
             validationSchema={validationSchema}
-            onSubmit={(values, { resetForm }) => {
-              console.log(values);
-              alert("Thank you for your feedback!");
-              resetForm();
+            onSubmit={(values, { setSubmitting, resetForm }) => {
+              setTimeout(() => {
+                setShowPopup(true);
+                resetForm();
+                setSubmitting(false);
+              }, 2000);
             }}
           >
             {({ setFieldValue, values }) => (
@@ -129,6 +134,26 @@ export default function Feedback() {
           </Formik>
         </div>
       </motion.div>
+      {showPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-[#171717] border border-purple-200 p-6 rounded-lg shadow-lg text-center">
+            <h2 className="text-xl font-bold mb-2 text-[#7c3aed]">
+              🎉 Thank You! 🎉
+            </h2>
+            <p className="text-white">
+              Your feedback is invaluable to us! <br /> We appreciate you taking
+              the time to share your thoughts. <br /> Your insights help us
+              improve and provide even better services. 🚀
+            </p>
+            <button
+              className="mt-4 px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-600"
+              onClick={() => setShowPopup(false)}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

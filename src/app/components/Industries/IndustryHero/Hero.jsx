@@ -1,10 +1,11 @@
+import Link from "next/link";
 import "./Hero.css";
 export default function Hero() {
   return (
     <div className="relative bg-black text-white md:h-[80vh]">
       {/* Background Image */}
       <div
-        className="absolute inset-0 flex items-start justify-end flex-col"
+        className="absolute inset-0 flex items-start justify-end flex-col ps-4"
         style={{ backgroundColor: "rgba(11, 17, 32, 1)" }}
       >
         <div
@@ -14,7 +15,7 @@ export default function Hero() {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 60%)",
           }}
         ></div>
-        <h2 className="hidden md:block text-white z-20 text-2xl">
+        <h2 className="hidden md:block text-white z-20 text-2xl mb-2">
           {" "}
           HEllo WORLD
         </h2>
@@ -40,9 +41,12 @@ export default function Hero() {
           Discover how DianApps breakthrough technologies are transforming
           industries.
         </p>
-        <button className="mt-6 px-6 py-3 bg-purple-600 text-white font-semibold rounded-full">
+        <Link
+          href="/contact"
+          className="mt-6 px-6 py-3 bg-purple-600 text-white font-semibold rounded-full"
+        >
           Talk to our Experts
-        </button>
+        </Link>
       </div>
     </div>
   );

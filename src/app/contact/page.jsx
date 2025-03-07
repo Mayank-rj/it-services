@@ -4,8 +4,11 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Contact() {
+  const [showPopup, setShowPopup] = useState(false);
+
   return (
     <div className="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-2 gap-8 bg-[#0b1120] shadow-lg rounded-lg text-[#ededed]">
       <motion.div
@@ -51,7 +54,8 @@ export default function Contact() {
           })}
           onSubmit={(values, { setSubmitting, resetForm }) => {
             setTimeout(() => {
-              alert("Message sent successfully!");
+              // alert("Message sent successfully!");
+              setShowPopup(true);
               resetForm();
               setSubmitting(false);
             }, 2000);
@@ -122,6 +126,24 @@ export default function Contact() {
           )}
         </Formik>
       </motion.div>
+      {showPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+          <div className="bg-[#171717] border border-purple-200 p-6 rounded-lg shadow-lg text-center">
+            <h2 className="text-xl font-bold mb-2">🎉 Thank You! 🎉</h2>
+            <p>
+              Your message has been successfully sent! <br />
+              Our expert team will get back to you soon. <br />
+              We can't wait to collaborate on something extraordinary. 🚀
+            </p>
+            <button
+              className="mt-4 px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-600"
+              onClick={() => setShowPopup(false)}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

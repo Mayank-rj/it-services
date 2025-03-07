@@ -7,6 +7,7 @@ const ContactForm = () => {
   const [num1, setNum1] = useState(0);
   const [num2, setNum2] = useState(0);
   const [captchaAnswer, setCaptchaAnswer] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
   const generateCaptcha = () => {
     const rand1 = Math.floor(Math.random() * 10) + 1;
@@ -45,8 +46,11 @@ const ContactForm = () => {
         .matches(new RegExp(`^${captchaAnswer}$`), "Incorrect answer")
         .required("Solve the captcha"),
     }),
-    onSubmit: (values) => {
+    onSubmit: (values, { resetForm }) => {
       console.log("Form Data:", values);
+      setShowPopup(true);
+      resetForm();
+      generateCaptcha();
     },
   });
 
@@ -163,6 +167,24 @@ const ContactForm = () => {
           </form>
         </div>
       </div>
+      {showPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-[#171717] border border-purple-200 p-6 rounded-lg shadow-lg text-center">
+            <h2 className="text-xl font-bold mb-2">🎉 Thank You! 🎉</h2>
+            <p>
+              Your message has been successfully sent! <br />
+              Our expert team will get back to you soon. <br />
+              We can't wait to collaborate on something extraordinary. 🚀
+            </p>
+            <button
+              className="mt-4 px-4 py-2 bg-purple-700 text-white rounded-lg hover:bg-purple-600"
+              onClick={() => setShowPopup(false)}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
