@@ -1,4 +1,4 @@
-import CTA from "@/app/components/CTA/CTA";
+import CTA1 from "@/app/components/CTA/CTA1";
 import Features from "@/app/components/Industries/features/Features";
 import HeroSec from "@/app/components/Industries/industriesHero/HeroSec";
 import WhyChooseUs from "@/app/components/Industries/WhyChooseUs/WhyChooseUs";
@@ -81,7 +81,7 @@ export default function Travel() {
         description="From AI-powered recommendations to seamless booking experiences, we build cutting-edge travel solutions."
         cardInfo={featuresCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Looking to Build a Travel Tech Platform?"}
         description={
           "Let’s create an innovative and seamless travel experience together!"
@@ -95,7 +95,7 @@ export default function Travel() {
         }
         cardInfo={whyChooseCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Let’s Transform the Travel Industry Together"}
         description={
           "Innovate your travel platform with our cutting-edge technology solutions."

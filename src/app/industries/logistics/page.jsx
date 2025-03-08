@@ -1,4 +1,4 @@
-import CTA from "@/app/components/CTA/CTA";
+import CTA1 from "@/app/components/CTA/CTA1";
 import Features from "@/app/components/Industries/features/Features";
 import HeroSec from "@/app/components/Industries/industriesHero/HeroSec";
 import WhyChooseUs from "@/app/components/Industries/WhyChooseUs/WhyChooseUs";
@@ -81,7 +81,7 @@ export default function Logistics() {
         description="From real-time fleet tracking to AI-driven logistics analytics, we provide cutting-edge solutions to streamline supply chain management."
         cardInfo={featuresCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Want to Optimize Your Logistics Operations?"}
         description={
           "Let’s build a seamless and efficient logistics tech solution together!"
@@ -95,7 +95,7 @@ export default function Logistics() {
         }
         cardInfo={whyChooseCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Let’s Transform the Logistics Industry Together"}
         description={
           "Innovate your supply chain and logistics business with our technology solutions."

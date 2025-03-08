@@ -9,7 +9,7 @@ import HeroSection from "./components/HeroSection/HeroSection";
 import TechnologiesTab from "./components/TechnologiesTab/TechnologiesTab";
 import ContactForm from "./components/ContactForm/ContactForm";
 import ServiceCard from "./components/ServiceCard/ServiceCard";
-import CTA from "./components/CTA/CTA";
+import CTA1 from "./components/CTA/CTA1";
 import Projects from "./components/Projects/Projects";
 import BlogCard from "./components/BlogCard/BlogCard";
 
@@ -166,7 +166,7 @@ export default function Home() {
 
       {/* Need patterned background Image for this CTA */}
       <section className="my-32">
-        <CTA
+        <CTA1
           heading={"Starting a new project or want to collaborate with us?"}
           description={"Let’s craft brilliance together!"}
           buttonName={"Get in Touch"}

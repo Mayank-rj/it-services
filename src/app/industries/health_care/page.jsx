@@ -1,4 +1,4 @@
-import CTA from "@/app/components/CTA/CTA";
+import CTA1 from "@/app/components/CTA/CTA1";
 import Features from "@/app/components/Industries/features/Features";
 import HeroSec from "@/app/components/Industries/industriesHero/HeroSec";
 import WhyChooseUs from "@/app/components/Industries/WhyChooseUs/WhyChooseUs";
@@ -76,7 +76,7 @@ export default function HealthCare() {
         description="We help you make healthcare accessible and affordable for the masses in a timeline and price that would suit the business needs. With extensive experience in both consumer-end and in-hospital healthcare solutions, we help you transform the domain."
         cardInfo={featuresCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Have a Healthcare Project Idea?"}
         description={"Bring it to us to build something extraordinary!"}
         buttonName={"Get in Touch"}
@@ -90,7 +90,7 @@ export default function HealthCare() {
         }
         cardInfo={whyChooseCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Let’s Digitalize the Health and Care Sector Together"}
         description={"It’s time to make healthcare accessible"}
         buttonName={"Let's Connect"}

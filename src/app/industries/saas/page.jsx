@@ -1,4 +1,4 @@
-import CTA from "@/app/components/CTA/CTA";
+import CTA1 from "@/app/components/CTA/CTA1";
 import Features from "@/app/components/Industries/features/Features";
 import HeroSec from "@/app/components/Industries/industriesHero/HeroSec";
 import WhyChooseUs from "@/app/components/Industries/WhyChooseUs/WhyChooseUs";
@@ -81,7 +81,7 @@ export default function Saas() {
         description="From AI-driven automation to cloud-based scalability, we build robust SaaS solutions that drive business growth."
         cardInfo={featuresCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Looking to Build a SaaS Platform?"}
         description={
           "Let’s create a scalable and high-performing SaaS solution together!"
@@ -95,7 +95,7 @@ export default function Saas() {
         }
         cardInfo={whyChooseCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Let’s Transform the SaaS Industry Together"}
         description={
           "Innovate your SaaS platform with our advanced technology solutions."

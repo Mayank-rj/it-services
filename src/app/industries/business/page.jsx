@@ -1,4 +1,4 @@
-import CTA from "@/app/components/CTA/CTA";
+import CTA1 from "@/app/components/CTA/CTA1";
 import Features from "@/app/components/Industries/features/Features";
 import HeroSec from "@/app/components/Industries/industriesHero/HeroSec";
 import WhyChooseUs from "@/app/components/Industries/WhyChooseUs/WhyChooseUs";
@@ -81,7 +81,7 @@ export default function Business() {
         description="We empower businesses to achieve their full potential by offering strategic guidance, market insights, and innovative solutions tailored to their unique needs."
         cardInfo={featuresCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Looking to Scale Your Business?"}
         description={
           "Let’s collaborate to create a powerful business strategy!"
@@ -95,7 +95,7 @@ export default function Business() {
         }
         cardInfo={whyChooseCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Let’s Elevate Your Business Together"}
         description={
           "Unlock new opportunities and achieve success with our expertise."

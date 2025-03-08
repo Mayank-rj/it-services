@@ -3,7 +3,7 @@ import React from "react";
 import Hero from "../components/Industries/IndustryHero/Hero";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import CTA from "../components/Industries/CTA/CTA";
+import CTA2 from "../components/CTA/CTA2";
 import Link from "next/link";
 
 export default function Industries() {
@@ -154,7 +154,7 @@ export default function Industries() {
         ))}
       </div>
       <div>
-        <CTA />
+        <CTA2 />
       </div>
     </>
   );

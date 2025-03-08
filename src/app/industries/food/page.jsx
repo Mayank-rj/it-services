@@ -1,4 +1,4 @@
-import CTA from "@/app/components/CTA/CTA";
+import CTA1 from "@/app/components/CTA/CTA1";
 import Features from "@/app/components/Industries/features/Features";
 import HeroSec from "@/app/components/Industries/industriesHero/HeroSec";
 import WhyChooseUs from "@/app/components/Industries/WhyChooseUs/WhyChooseUs";
@@ -81,7 +81,7 @@ export default function Food() {
         description="From online food delivery apps to restaurant management systems, we provide cutting-edge solutions to elevate the food industry."
         cardInfo={featuresCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Want to Transform Your Food Business?"}
         description={
           "Let’s build a seamless and efficient food tech solution together!"
@@ -95,7 +95,7 @@ export default function Food() {
         }
         cardInfo={whyChooseCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Let’s Elevate the Food Industry Together"}
         description={
           "Innovate your food business with our technology solutions."

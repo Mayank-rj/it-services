@@ -61,7 +61,11 @@ const Menu = ({ title, items, onClick, isMobile, setIsMobileMenuOpen }) => {
     >
       <div className="flex justify-between items-center w-full">
         <Link
-          href={`/${title.toLowerCase()}`}
+          href={
+            title.toLowerCase() === "portfolio"
+              ? "#"
+              : `/${title.toLowerCase()}`
+          }
           className={`text-white md:text-lg font-bold hover:text-purple-300 ${
             isMobile && "text-2xl"
           }`}

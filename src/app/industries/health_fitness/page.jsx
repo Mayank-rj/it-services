@@ -1,4 +1,4 @@
-import CTA from "@/app/components/CTA/CTA";
+import CTA1 from "@/app/components/CTA/CTA1";
 import Features from "@/app/components/Industries/features/Features";
 import HeroSec from "@/app/components/Industries/industriesHero/HeroSec";
 import WhyChooseUs from "@/app/components/Industries/WhyChooseUs/WhyChooseUs";
@@ -81,7 +81,7 @@ export default function HealthFitness() {
         description="From fitness tracking apps to AI-powered health analytics, we provide cutting-edge solutions to elevate the health and fitness sector."
         cardInfo={featuresCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Want to Revolutionize Health & Fitness?"}
         description={
           "Let’s build a seamless and efficient health and fitness tech solution together!"
@@ -95,7 +95,7 @@ export default function HealthFitness() {
         }
         cardInfo={whyChooseCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Let’s Elevate the Health & Fitness Industry Together"}
         description={
           "Innovate your health and fitness business with our technology solutions."

@@ -1,4 +1,4 @@
-import CTA from "@/app/components/CTA/CTA";
+import CTA1 from "@/app/components/CTA/CTA1";
 import Features from "@/app/components/Industries/features/Features";
 import HeroSec from "@/app/components/Industries/industriesHero/HeroSec";
 import WhyChooseUs from "@/app/components/Industries/WhyChooseUs/WhyChooseUs";
@@ -81,7 +81,7 @@ export default function MLearning() {
         description="From AI-driven personalization to gamified learning, we create cutting-edge solutions to revolutionize digital education."
         cardInfo={featuresCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Want to Enhance Digital Learning?"}
         description={
           "Let’s build a seamless and engaging m-learning solution together!"
@@ -95,7 +95,7 @@ export default function MLearning() {
         }
         cardInfo={whyChooseCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Let’s Revolutionize Education Together"}
         description={
           "Innovate your m-learning platform with our advanced technology solutions."

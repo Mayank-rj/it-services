@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-export default function CTA() {
+export default function CTA2() {
   return (
     <div className="relative flex items-center justify-center px-6 py-10">
       <div className="relative w-full max-w-5xl rounded-2xl p-[3px] bg-gradient-to-r from-cyan-400 to-purple-500">

@@ -1,4 +1,4 @@
-import CTA from "@/app/components/CTA/CTA";
+import CTA1 from "@/app/components/CTA/CTA1";
 import Features from "@/app/components/Industries/features/Features";
 import HeroSec from "@/app/components/Industries/industriesHero/HeroSec";
 import WhyChooseUs from "@/app/components/Industries/WhyChooseUs/WhyChooseUs";
@@ -79,7 +79,7 @@ export default function ECommerce() {
         description="From building custom e-commerce websites to optimizing conversions, we provide comprehensive solutions to scale your online store."
         cardInfo={featuresCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Ready to Launch Your E-commerce Store?"}
         description={"Let’s build a high-performing online store together!"}
         buttonName={"Get in Touch"}
@@ -91,7 +91,7 @@ export default function ECommerce() {
         }
         cardInfo={whyChooseCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Let’s Transform Your Online Business"}
         description={
           "Take your e-commerce store to the next level with our expertise."

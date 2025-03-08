@@ -1,4 +1,4 @@
-import CTA from "@/app/components/CTA/CTA";
+import CTA1 from "@/app/components/CTA/CTA1";
 import Features from "@/app/components/Industries/features/Features";
 import HeroSec from "@/app/components/Industries/industriesHero/HeroSec";
 import WhyChooseUs from "@/app/components/Industries/WhyChooseUs/WhyChooseUs";
@@ -81,7 +81,7 @@ export default function Sports() {
         description="From AI-powered analytics to real-time engagement platforms, we build cutting-edge sports solutions."
         cardInfo={featuresCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Looking to Build a Sports Tech Platform?"}
         description={
           "Let’s develop an engaging and high-performing sports solution together!"
@@ -95,7 +95,7 @@ export default function Sports() {
         }
         cardInfo={whyChooseCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Let’s Transform the Sports Industry Together"}
         description={
           "Innovate your sports platform with our cutting-edge technology solutions."

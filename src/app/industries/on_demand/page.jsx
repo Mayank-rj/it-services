@@ -1,4 +1,4 @@
-import CTA from "@/app/components/CTA/CTA";
+import CTA1 from "@/app/components/CTA/CTA1";
 import Features from "@/app/components/Industries/features/Features";
 import HeroSec from "@/app/components/Industries/industriesHero/HeroSec";
 import WhyChooseUs from "@/app/components/Industries/WhyChooseUs/WhyChooseUs";
@@ -81,7 +81,7 @@ export default function OnDemand() {
         description="From real-time tracking to AI-driven personalization, we build cutting-edge solutions to power on-demand services."
         cardInfo={featuresCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Looking to Build an On-Demand App?"}
         description={
           "Let’s create a seamless and scalable on-demand platform together!"
@@ -95,7 +95,7 @@ export default function OnDemand() {
         }
         cardInfo={whyChooseCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Let’s Transform the On-Demand Industry Together"}
         description={
           "Innovate your on-demand platform with our advanced technology solutions."

@@ -68,3 +68,9 @@ body {
   );
   border-radius: 10px;
 }
+
+/*-----Services Home pAge---------*/
+.hero-bg {
+  background: url("https://v3.tailwindcss.com/_next/static/media/0-dark@tinypng.74768a0b.png");
+  background-size: 100% 100%;
+}

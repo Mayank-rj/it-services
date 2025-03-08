@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-export default function CTA({ heading, description, buttonName }) {
+export default function CTA1({ heading, description, buttonName }) {
   return (
     <>
       <motion.div

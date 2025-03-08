@@ -1,4 +1,4 @@
-import CTA from "@/app/components/CTA/CTA";
+import CTA1 from "@/app/components/CTA/CTA1";
 import Features from "@/app/components/Industries/features/Features";
 import HeroSec from "@/app/components/Industries/industriesHero/HeroSec";
 import WhyChooseUs from "@/app/components/Industries/WhyChooseUs/WhyChooseUs";
@@ -80,7 +80,7 @@ export default function Finance() {
         description="From digital banking solutions to AI-powered financial analytics, we provide innovative services to transform the finance sector."
         cardInfo={featuresCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Looking for Cutting-Edge Fintech Solutions?"}
         description={
           "Let’s build secure and innovative financial systems together!"
@@ -94,7 +94,7 @@ export default function Finance() {
         }
         cardInfo={whyChooseCardInfo}
       />
-      <CTA
+      <CTA1
         heading={"Let’s Revolutionize Financial Services Together"}
         description={
           "Take your financial business to the next level with our expertise."
